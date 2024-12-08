@@ -1,0 +1,54 @@
+<view>
+
+<!-- 关于我们 -->
+<view wx:if="{{guanyu}}">
+  <view style="padding:20rpx">
+<!-- //小程序简介部分 -->
+<view><view style="width:8rpx;height:50rpx;background-color: #1d975c; float: left;"></view>
+<view style="font-size: 35rpx; font-weight: 600; margin-left: 30rpx;">小程序简介</view>
+<view style="height:25rpx">
+</view>
+<view> <text decode="{{true}}" style="font-size: 30rpx;"> &nbsp; &nbsp;本作品基于前后端、深度学习与大数据等技术完成的.</text></view>
+<view> <text decode="{{true}}" style="font-size: 30rpx;">&nbsp;&nbsp;本团队设计了以图像处理和模式识别为核心的深度学习技术对农作物病虫害的智能诊断系统, 我们搭建实验平台,开发了集病虫害识别和农业经验分享等多项功能于一体的小程序,通过小程序手机端、服务端和深度学习算法相结合,实现高效准确的稻田病虫害诊断。用户和专家可以在田间随时随地利用小程序进行上传图像识别,并有针对性地进行病虫害的防治,有利于水稻病虫害快速高效的治理。
+</text></view>
+<view>
+<image src="/image/tab/jianjie.jpg" style="width:100%;"></image>
+</view></view>
+<!-- 开发者介绍 -->
+<view>
+  <view style="margin-top:25rpx;margin-bottom: 25rpx;"><view style="width:8rpx;height:50rpx;background-color: #1d975c; float: left;"></view>
+<view style="font-size: 35rpx; font-weight: 600; margin-left: 30rpx;">开发者</view>
+<view style="height:25rpx">
+</view>
+</view>
+
+<view style="font-size: 35rpx;line-height: 35rpx; font-weight: 600;text-align: center;">海创团队</view>
+<view style="margin-top: 5rpx;">
+  <text decode="{{true}}" style="font-size: 30rpx;">&nbsp;&nbsp;</text>
+ 海创团队成立于2006年，至今已有十余年的发展历史。
+在一代又一代的海创成员共同努力下，如今团队已成为具有一定规模且制度完善的科技创新型团队。
+海创团队分为硬件和软件两个大组，大组中又分为多个方向。其中硬件组分为水下机器人方向、机械臂方向、SLAM自主导航方向；软件组分为前端方向、后端方向、ui方向、小程序方向、深度学习方向、大数据方向、安卓方向。是一支综合性的科技创新型团队。
+
+</view>
+<view><image src="/image/tab/team.jpg" style="width:90%;height:350rpx;margin-left: 35rpx;margin-top: 10rpx;"></image></view>
+
+
+
+</view></view>
+</view>
+<!-- 商务合作 -->
+<view wx:if="{{shangwu}}" style="width:500rpx; height:500rpx;margin: auto">
+  <image src="/image/tab/code.jpg" style="width:500rpx; height:500rpx;margin-top: 200rpx;">
+</image>
+<view style="font-size: 30rpx;font-weight: 600;text-align: center;">
+扫描二维码联系我们
+</view>
+</view>
+<!-- 意见反馈 -->
+<view wx:if="{{yijian}}">
+<textarea style="width:90%;height:500rpx;margin-left: 15rpx;  margin-top: 80rpx;border-radius: 30rpx;border:1rpx #ccc solid;padding:20rpx" placeholder="请输入你的意见反馈"></textarea>
+<view style="position: fixed; bottom:0;background-color: #1d975c;width:100%;height:100rpx; text-align: center;line-height: 100rpx;color: white;font-size: 35rpx;">
+提交
+</view>
+</view>
+</view>

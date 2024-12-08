@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index"
+  },
+  "navigationBarTitleText": "拍照识别",
+  "navigationBarBackgroundColor": "#1d975c",
+  "navigationBarTextStyle": "white"
+
+}

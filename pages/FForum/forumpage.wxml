@@ -1,0 +1,63 @@
+<view id="forumpage">
+<!-- 头部导航栏 -->
+  <view class="height">
+    <view class="header">
+      <view class="search">
+        <image src="/image/tab/search.png" style="width:40rpx;height:40rpx;margin-right:20rpx"></image>
+        <input type="text" placeholder="搜索问答帖子" bindconfirm="bindKeyInput"></input>
+      </view>
+      <view class="home-header-line"></view>
+      <view class="apart">
+        <view wx:for="{{tabList}}" wx:key="index" class="{{active === item.id  ?'active-title':'apart-title'}}" bindtap="changeapart" data-id="{{item.id}}">{{item.title}}</view>
+
+      </view>
+
+
+    </view>
+  </view>
+  <image src="/image/tab/addquesbtn.png" class="add-wrap" bindtap="publish"></image>
+  <view class="forum-list">
+    <!-- 一个问答 -->
+    <view wx:for="{{forumlist}}" wx:key="index" >
+      <view class="forum-card">
+        <view class="card-first" data-id="{{item.userId}}" bindtap="ToUserpage">
+          <image src="{{item.avatarUrl}}" class="bloger-img"></image>
+          <view class="bloger-name">{{item.username}}</view>
+          <view class="role">{{item.roles[0]}}</view>
+
+        </view>
+        <view class="card-second">
+          <view class="blogcontent">
+            <view class="ques-title" bindtap="getforumdetail" data-id="{{item.id}}">
+              {{item.description}}
+            </view>
+            <view class="ques-photo" bindtap="getforumdetail" data-id="{{item.id}}">
+              <view wx:for="{{item.photo}}" wx:key="index" class="photo" wx:if="{{index<3}}">
+                <image src="{{item}}" class="photo"></image>
+              </view>
+
+            </view>
+          </view>
+
+
+          <view class="replay-height">
+            <view class="time">{{item.createTime}}</view>
+            <view class="ques-reply" data-id="{{item.id}}">
+              <image src="/image/tab/HF.png" class="replayimg"></image>
+              <view class="replaynum">{{item.commentCounts}}</view>
+              <image class="collectimg" src="{{item.isStore === 0 ? '../../image/tab/shouc.png' : '../../image/tab/shoucY.png'}} " bindtap="shoucang" data-id="{{item.id}}" data-index="{{index}}" ></image>
+              <view>{{item.shoucangstatus}}</view>
+              <view class="collectnum">{{item.storeCounts}}</view>
+            </view>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+
+
+
+  </view>
+
+</view>

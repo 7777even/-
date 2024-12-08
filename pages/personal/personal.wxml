@@ -1,0 +1,140 @@
+<view id="mine">
+<!-- 头部 -->
+<view class="headercanner">
+  <view class="header">
+  <!-- <van-notice-bar
+  left-icon="volume-o"
+  text="农业也AI，水稻医生识别准确率达90% ，一秒识别水稻病虫害，解决水稻“看病难”。"
+/> -->
+<view class="headerbody">
+<view class="first">
+  <view class="image">
+<image src="{{personalMes.avatarUrl}}" >
+</image>
+</view>
+<view class="personalmes">
+ <view> <text class="username" style="float: left;">{{personalMes.username}}</text></view>
+  <view class="role" style="float:left;margin-left: 0rpx;margin-top: 5rpx;background-color: green;">{{personalMes2.role}}</view>
+</view>
+<!-- <view class="exit" bindtap="exit">
+<image src="/image/tab/exit.png" class="exitpicture"></image>
+</view> -->
+<view class="edit">
+<image src="/image/tab/editperson.png" class="editpicture" bindtap="modalinput"></image>
+</view>
+
+</view>
+<view class="second">
+<view class="shibie">
+<view>{{personalMes2.recognitionCounts}}</view>
+<text>我的识别记录</text>
+</view>
+<view class="wenda">
+  <view>{{personalMes2.questionCounts}}</view>
+<text>我的问答记录</text>
+</view>
+</view>
+<view class="third">
+科技赋能--实现禾下乘凉梦
+</view>
+</view>
+
+</view>
+</view>
+<!-- 下半部分 -->
+<view class="main">
+<view class="mainFirst">
+<view class="servertitle">我的服务</view>
+<view>
+<view>
+<view class="server">
+  <view  class="serveritem" bindtap="tiaozhuan" data-id="1">
+  <image src="/image/tab/dongtai.png"  style="width:70rpx;height:70rpx" class="image1"></image>
+  <view style="margin-top: 4rpx;font-size: 28rpx;">动态收藏</view>
+</view>
+<view class="serveritem" bindtap="tiaozhuan" data-id="2"> 
+<image src="/image/tab/blogcollect.png" class="image1"></image>
+<view style="margin-top: 14rpx;">百科收藏</view>
+</view>
+
+<view  class="serveritem" bindtap="tiaozhuan" data-id="3">
+  <image src="/image/tab/wendacollect.png"  class="image1"></image>
+  <view style="margin-top: 16rpx;">问答收藏</view>
+</view>
+<view  class="serveritem" bindtap="openlist" data-id="4">
+  <image src="/image/tab/guanzhulist.png"  class="image2"></image>
+  <view style="margin-top: 10rpx;">关注列表</view>
+</view>
+</view>
+<view class="server2">
+<view  class="serveritem" style="margin-left: -15rpx;">
+  <button  open-type="share" style="height:90rpx;margin-top: 3rpx;">
+  <image src="/image/tab/addfriend.png"  class="image2"></image>
+
+</button>
+<view style="margin-top: -2rpx;">邀请好友</view>
+</view>
+  
+<view  class="serveritem" style="margin-left: 55rpx;">
+  <image src="/image/tab/kefu.png"  class="image3"></image>
+  <view style="margin-top: 13rpx;">联系客服</view>
+</view>
+
+<view  class="serveritem" bindtap="exit" style="margin-left: 55rpx;">
+  <image src="/image/tab/exitbtn.png"  class="image3"></image>
+  <view style="margin-top: 13rpx;">退出登录</view>
+</view>
+
+</view></view>
+
+
+</view>
+</view>
+<view class="mainSecond">
+<view class="othertitle">
+其他
+</view>
+<view class="other">
+  <view class="otheritem" bindtap="tiaozhuan2" data-id="1">
+  <image src="/image/tab/yijian.png"></image>
+  <view class="itemname">意见反馈</view> 
+  <view class="jiantou">></view>
+  </view>
+<view class="otheritem"  bindtap="tiaozhuan2" data-id="2">
+<image src="/image/tab/shangwu.png"></image>
+<view class="itemname">商务合作</view>
+<view class="jiantou">></view>
+</view>
+<view class="otheritem"   bindtap="tiaozhuan2" data-id="3">
+  <image src="/image/tab/guanyu.png"></image>
+  <view class="itemname">关于我们</view>
+  <view class="jiantou">></view>
+</view></view>
+</view>
+</view>
+
+</view>
+<van-action-sheet show="{{ show }}" title="关注列表（{{personalnum}}人）"   bind:close="onClose" className="liststyle">
+  <view style="height:100rpx;width: 100%;"></view>
+  <block>
+<view class="user-list" wx:for="{{followlist}}" wx:key="index">
+<image src="{{item.avatarUrl}}" class="face"></image>
+<view class="nick-name"> {{item.username}}
+</view>
+<view class="role">用户
+</view>
+<view style="width:155rpx;height:55rpx;border-radius: 30rpx;background-color: rgb(236, 128, 5);float: right; color:white;text-align: center;line-height: 55rpx;margin-top: 18rpx;margin-right: 15rpx;" bindtap="guanzhu" data-id="{{item.uid}}" wx:if="{{status!=cancle}}"> + 关注</view>
+
+<view style="width:155rpx;height:55rpx;border-radius: 30rpx;background-color:#ccc;float: right; color:white;text-align: center;line-height: 55rpx;margin-top: 18rpx;margin-right: 15rpx;" bindtap="guanzhu" data-id="{{item.uid}}" wx:if="{{cancle}}"> 取消关注</view>
+
+</view>
+</block>
+<view style="width: 100%;height:100rpx;"></view>
+<view class="nullpicture" wx:if="{{isnull}}">
+        <image src="/image/tab/datanull.png"></image>
+        <view style="text-align: center;">
+          暂无关注
+        </view>
+      </view>
+
+</van-action-sheet>

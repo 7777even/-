@@ -1,0 +1,10 @@
+{
+  
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "base-card":"../../component/basecard/basecard"
+  },
+  "navigationBarTitleText": "病虫害库",
+  "navigationBarBackgroundColor": "#1d975c",
+  "navigationBarTextStyle": "white"
+}

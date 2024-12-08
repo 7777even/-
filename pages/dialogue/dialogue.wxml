@@ -1,0 +1,102 @@
+<view>
+<scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+  <!-- <view class='scrollMsg'> -->
+        <!--底部关闭表情包层级-->
+    <view class="bottom" bindtouchstart="closure"></view>
+  <block class="top"  wx:for='{{msgList}}' wx:for-index="index" wx:key="text">
+    <!-- 单个消息1 客服发出（左） -->
+    <view wx:if='{{item.to!=chatId}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+    <view>
+    </view>
+      <view style='width: 11vw; height: 11vw;'>
+        <image class="avatarUrl_left"src='{{touser.avatarUrl}}'></image>
+      </view>
+      <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+        <image wx:if="{{item.type==='text'}}" style='width: 4vw;' src='/image/tab/jiantou.png.png' mode='widthFix'></image>
+      </view>
+      <!--消息-->
+      <view class='leftMsg' wx:if="{{item.type==='text'}}">{{item.text}}</view>
+      <view class='leftMsg_image' wx:if="{{item.type==='image'}}">
+      <image class="chat_pictures" src="{{item.text}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      </view>   
+      <view class='leftMsg_image' wx:if="{{item.type==='video'}}">
+    <video id='Video' class="" src="{{item.text}}" bindplay='bindplay' object-fit="cover" play-btn-position='center'	duration='true'	ocontrols='false'>
+    </video>
+      </view>  
+    </view>
+    <!-- 单个消息2 用户发出（右） -->
+    <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+                 <!--消息-->
+      <view class='rightMsg' wx:if="{{item.type==='text'}}">{{item.text}}</view>
+      <view class='rightMsg_image' wx:if="{{item.type==='image'}}">
+      <image class="chat_pictures" src="{{item.text}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      </view> 
+       <view class='rightMsg_image' wx:if="{{item.type==='video'}}">
+    <video id='Video' class="" src="{{item.msg}}" bindplay='bindplay' 	bindfullscreenchange='bindfullscreenchange' object-fit="cover" play-btn-position='center'	duration='true'	ocontrols='false'>
+    </video>
+      </view> 
+      <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+        <image wx:if="{{item.type==='text'}}" style='width: 4vw;' src='/image/tab/jiantou.png' mode='widthFix'></image>
+      </view>
+      <view style='width: 11vw; height: 11vw;'>
+        <image class="avatarUrl_right" src='{{userInfo.avatarUrl}}'></image>
+      </view>
+    </view>
+  </block>
+  <!-- </view> -->
+  <!-- 占位 -->
+  <view style='width: 100%; height: 18vw;'></view>
+</scroll-view>
+
+
+
+
+<!--输入框-->
+<view class="{{inputBottom==0?'inputRoom':'inputRoom_1'}}" >
+<!--	cursor-spacing='{{inputBottom}}' 键盘的高度进行了固定，高度为可用界面高度的40%，解决键盘与表情包界面等节目的高度变化的不等问题-->
+  <input bindconfirm='sendClick' 	confirm-hold="true" 	hold-keyboard="true"	focus="auto" adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindinput="input" bindfocus='focus' bindblur='blur'></input>
+  <!-- <image style='width: 8vw;    height: 7vw; margin-left: 3.2vw; margin-top:1vw' wx:if="{{!emoji}}" 
+  src='/image/tab/biaoqing.png' bindtap="emoji" mode='widthFix'></image>
+  <image style='width: 7vw;    height: 7vw; margin-left: 3.2vw;'  wx:if="{{emoji}}" src='/image/tab/qita.png' bindtap="keyboard" mode='widthFix'></image> -->
+  <image style='width: 8vw;    height: 7vw; margin-left: 3.2vw; margin-top:1vw' 
+  src='/image/tab/biaoqing.png' bindtap="emoji" mode='widthFix'></image>
+  <block >
+      <view class="send" wx:if="{{inputVal!=''}}" bindtap="sendClick">发送</view>
+       <image style='width: 7.5vw;    height: 7vw; margin-left: 3.2vw; margin-right: 2vw; margin-top: 0.5vw;'  wx:if="{{inputVal==''}}" src='/image/tab/qita.png' bindtap="add" mode='widthFix'></image>
+  </block>
+</view>
+<!--表情包-->  
+<scroll-view  scroll-y="true" wx:if="{{emoji}}"  style='height:{{inputBottom}};    background-color: #fff;'  >
+  <view class="emoji" style='height:{{inputBottom}};'>
+  <view  class="emoji_image" wx:for="{{Emoji}}" wx:for-index="index" data-emoji="{{item}}" wx:key="index" bindtap="bindemoji">
+      {{item}}
+  </view>
+  <view class="emoji_delete">
+    <image style='width: 7vw; height: 7vw;' src='/image/tab/cc.png' bindtap="emoji_delete" mode='widthFix'></image>
+  </view>   
+</view>
+</scroll-view>
+
+<!--图片-->
+ <view class="emoji" wx:if="{{add}}" style='height:{{inputBottom}};'>
+<view>
+  <view class="add" bindtap="photo">
+   <image class="add_image" src="/image/tab/picture.png" lazy-load="false" binderror="" bindload="" />
+</view>
+<view class="add_text">图片</view>
+</view>
+<view>
+  <view class="add" bindtap="photograph">
+  <image class="add_image" src="/image/tab/xj.png" lazy-load="false" binderror="" bindload="" />
+</view>
+<view class="add_text">照相</view>
+</view>
+<view>
+    <view class="add" bindtap="shortVideo">
+  <image class="add_image" src="/image/tab/sp.png" lazy-load="false" binderror="" bindload="" />
+</view>
+<view class="add_text">短视频</view>
+</view>
+  
+</view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "base-card":"../../component/basecard/basecard"
+  },
+  "navigationBarTitleText": "动态",
+  "navigationBarBackgroundColor": "#1d975c",
+  "navigationBarTextStyle": "white"
+}

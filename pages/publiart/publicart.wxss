@@ -1,0 +1,67 @@
+
+.partitle {
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+  color: #1d975c;
+  font-weight: 500;
+
+}
+
+.addimg2{
+  width:190rpx;
+  height: 210rpx;
+ border:1rpx solid rgb(224, 224, 224);
+ margin-top: 20rpx;
+ margin-left:35rpx;
+ text-align: center;
+ line-height: 200rpx;
+ font-size: 60rpx;
+ color: teal;
+}
+.imgbox{
+display: flex;
+flex-wrap: wrap;
+margin-top: 15rpx;
+margin-left: 5rpx;
+}
+.showimg2{
+  width:190rpx;
+  height: 210rpx;
+  margin-top: 20rpx;
+  margin-left: 35rpx;
+
+ }
+ .addPic_close{
+   width:40rpx;
+   height:40rpx;
+   background-color: #ccc;
+   border-radius: 50%;
+   color:white;
+   text-align: center;
+   line-height: 40rpx;
+   font-size: 35rpx;
+   float: right;
+   margin-top: 5rpx;
+   position: relative;
+   margin-left: -20rpx;
+ }
+.steps_box {
+	width: 100%;
+  display: flex;
+margin-top: 30rpx;
+	/* flex-direction: row; */
+	align-items: center;
+  justify-content: center;
+
+}
+.textareabox2{
+  width:98%;
+  height:200rpx;
+  margin: 0 auto;
+  border-radius: 25rpx;
+  padding:20rpx;
+  font-size:28rpx;
+}
+
+

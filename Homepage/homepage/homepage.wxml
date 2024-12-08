@@ -1,0 +1,33 @@
+<page id="homepage">
+<view class="first">
+  <view class="search" >
+<image src="/image/tab/search.png" style="width:40rpx;height:40rpx;margin-right:20rpx"></image>
+  <input type="text" placeholder="输入病虫害名字"  bindconfirm="bindKeyInput" 	confirm-type="search"></input>
+</view>
+<view>
+<image src="/image/tab/list.png" class="list"></image>
+
+</view>
+</view>
+
+
+
+
+<view class="shibie" bindtap="showCamera">
+<view class="box">
+<image src="../../image/tab/xiangji.png" class="Camera"></image>
+<camera device-position="{{cameraPos}}" wx:if="{{showCamera}}">
+  <view class="CameraOptions">
+    <view class="takePicBtn">
+       <!-- 摄像头的返回按钮 -->
+       <cover-image class="confirm" src="" bindtap="goBack"></cover-image>
+       <!-- 照相的按钮 -->
+       <cover-view bindtap="getPhoto"></cover-view>
+       <!-- 摄像头的前后转换按钮 -->
+       <cover-image class="switch" src="" bindtap='changePos'></cover-image>
+   </view>
+  </view>
+</camera>
+</view><view class="title">点击拍照识别</view>
+</view>
+</page>

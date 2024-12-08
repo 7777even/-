@@ -1,0 +1,82 @@
+<view id="community">
+
+<view class="headercontainer">
+<view class="header">
+<view class="menu">
+<view class="menuitem1"  bindtap="toBase"><image src="/image/tab/menu.png"></image>
+<view class="itemtext" bindtap="toBase">病害库</view>
+</view>
+<view class="menuitem2" bindtap="toforum"><image src="/image/tab/ZX.png" id="zixun"></image>
+<view>
+问答圈子
+</view>
+</view>
+<view class="menuitem3" bindtap="luntan"><image src="/image/tab/luntan.png"></image>
+  <view>
+论坛
+</view>
+</view>
+</view>
+</view>
+<view class="new">
+<view class="newtitle">
+新闻资讯
+</view>
+<view bindtap="dumpdetail" data-id="1">
+  <view class="newcard">
+<view class="newarticle">
+<view class="articletitle">
+<text>2022年全国早稻病虫害发生趋势预报</text>
+</view>
+<view class="artcile">
+  5月24日，全国农技中心召开了2022年全国早稻病虫害发生趋势网络会商会。来自南方早稻主产省的测报技术人员和科研、教学单位的有关专家，根据当前病虫发生基数、水稻栽培情况和气候条件等因素综合分析，预计今年早稻病虫害总体偏重发生，全国发生面积2.50亿亩次，重于上年。其中，稻飞虱、二化螟、纹枯病偏重发生，局部大发生；稻纵卷叶螟、稻瘟病中等发生，局部偏重发生；三化螟偏轻发生。与上年相比，稻飞虱、稻纵卷叶螟、二化螟、纹枯病、稻瘟病发生偏重，三化螟偏轻。</view>
+  <view style="margin-top: 10rpx;float: right;margin-right: 10rpx; color: #1d975c;">来源：病虫害测报处</view>
+</view>
+</view></view>
+<view bindtap="dumpdetail" data-id="2" >
+  <view class="newcard">
+<view class="newarticle">
+<view class="articletitle">
+<text>土壤水分监测</text>
+</view>
+<view class="artcile">
+  5月24日，全国农技中心召开了2022年全国早稻病虫害发生趋势网络会商会。来自南方早稻主产省的测报技术人员和科研、教学单位的有关专家，根据当前病虫发生基数、水稻栽培情况和气候条件等因素综合分析，预计今年早稻病虫害总体偏重发生，全国发生面积2.50亿亩次，重于上年。其中，稻飞虱、二化螟、纹枯病偏重发生，局部大发生；稻纵卷叶螟、稻瘟病中等发生，局部偏重发生；三化螟偏轻发生。与上年相比，稻飞虱、稻纵卷叶螟、二化螟、纹枯病、稻瘟病发生偏重，三化螟偏轻。</view>
+  <view style="margin-top: 10rpx;float: right;margin-right: 10rpx; color: #1d975c;">来源：中央气象局</view>
+</view>
+</view></view>
+<view bindtap="dumpdetail" data-id="3" >
+  <view class="newcard">
+<view class="newarticle">
+<view class="articletitle">
+<text>近期水稻应对阴雨寡照防灾减灾技术意见</text>
+</view>
+<view class="artcile">
+  根据水稻苗情监测和大面积生产调查，当前主城都市区、渝东北低海拔区域水稻已经逐渐进入拔节期，渝东北中高海拔区域处于有效分蘖临界叶龄期，渝东南还处于分蘖期。主城都市区部分区县、渝东南区县水稻受5月下旬至6月上旬阴雨天气影响较大，群体小于去年同期。为促进大面积稳产增产，提出如下技术指导意见</view>
+  <view style="margin-top: 10rpx;float: right;margin-right: 10rpx; color: #1d975c;">来源：重庆市农业技术推广总站</view>
+</view>
+</view></view>
+<view bindtap="dumpdetail" data-id="4" >
+  <view class="newcard">
+<view class="newarticle">
+<view class="articletitle">
+<text>你真的懂智慧农业吗？智慧农业≠智慧应用于农业</text>
+</view>
+<view class="artcile">
+  智慧与农业，关系密切。有人说，多亏了人类的智慧，使得化肥和农药大大提高了农作物产量，让社会得以快速发展。但更多的人却说，过多的智慧，给人类的延续带来了损害。笔者认为，当我们正确利用人类智慧的时候，智慧必定是促进人来发展且没有负面影响的。这样的农业，我称之为智慧农业。有人说，“互联网+”时代，智慧农业是必然趋势。那么到底什么是智慧农业呢？智慧农业又会有怎样的发展趋势呢？</view>
+  <view style="margin-top: 10rpx;float: right;margin-right: 10rpx; color: #1d975c;">来源：中国农业新闻网</view>
+</view>
+</view></view>
+<view bindtap="dumpdetail" data-id="5" >
+  <view class="newcard">
+<view class="newarticle">
+<view class="articletitle">
+<text>中斯专家“云端”共探农业减贫合作路径</text>
+</view>
+<view class="artcile">
+  近日，中国云南—斯里兰卡农业减贫合作论坛以线上线下相结合的方式启幕。来自中斯两国的专家学者们，围绕“农业科技助力减贫”等主题，共探农业减贫合作路径。本次论坛为期3天，设置发展茶叶产业专题研讨会、热带经济作物专题研讨会、农业科技合作助力减贫专题研讨会等多个活动，由云南省人民政府外事办公室、云南省农业科学院、斯里兰卡农业部农业司联合主办。</view>
+  <view style="margin-top: 10rpx;float: right;margin-right: 10rpx; color: #1d975c;">来源：中国新闻网</view>
+</view>
+</view></view>
+</view>
+</view>
+</view>

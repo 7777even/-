@@ -1,0 +1,273 @@
+#mine{
+  width:100%;
+  height:100%;
+  background-color: #fafaf8;
+}
+.headercanner{
+  width:100%;
+  height:320rpx;
+  background-color: #1d975c;
+  padding-top:10rpx;
+}
+.header{
+  width:100%;
+  height:350rpx;
+  background-color: #1d975c;
+  padding-top:10rpx;
+  border-radius: 200px/20px;
+  /* border-bottom-left-radius:50rpx ;
+  border-bottom-right-radius:50rpx ; */
+}
+.headerbody{
+  width:90%;
+  height:300rpx;
+  margin:0 auto;
+  
+}
+.first{
+  width:100%;
+  height:120rpx;
+}
+.image{
+  width:100rpx;
+  height:100rpx;
+  float: left;
+  border-radius: 50%;
+  text-align: center;
+  border:#8caf85 5rpx solid ;
+  margin-left: 30rpx;
+  line-height: 90rpx;
+}
+.image image{
+  width:96rpx;
+  height:96rpx;
+border-radius: 50%;
+/* vertical-align: middle !important; */
+margin-top: 3rpx;
+margin-left: 1rpx;
+}
+.personalmes{
+  margin-left: 30rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+.username{
+  color:rgb(235, 230, 230);
+  font-size: 28rpx;
+}
+.role{
+  color:white;
+  background-color: #7fab6e;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  width:80rpx;
+}
+.edit{
+float: right;
+
+}
+.exit{
+  float: right;
+  }
+
+.editpicture{
+  width:55rpx;
+  height:55rpx;
+  text-align: center;
+  margin-left: 25rpx;
+}
+.exitpicture{
+  width:55rpx;
+  height:50rpx;
+  text-align: center;
+  margin-left: 25rpx;
+  margin-top: 3rpx;
+}
+.second{
+  display: flex;
+  width:100%;
+  height:120rpx;
+margin-top: 90rpx;
+  justify-content: space-around;
+}
+.third{
+
+  width:85%;
+  height:130rpx;
+  background-color: rgb(248, 243, 243);
+  opacity: 0.7;
+  margin: 0 auto;
+  border-radius: 200px/13px;
+  margin-top: 27rpx;
+  text-align: center;
+  color:green;
+  line-height: 130rpx;
+  font-size: 40rpx;
+ font-weight: bolder;
+}
+.shibie view{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-style: 35rpx;
+}
+.shibie text{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-size: 30rpx;
+}
+.wenda view{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-style: 35rpx;
+}
+.wenda text{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-size: 30rpx;
+}
+.main{
+  width:90%;
+  margin:0 auto;
+  margin-top: 70rpx;
+}
+.mainFirst{
+background-color: #fbffff;
+  width:100%;
+  height:450rpx;
+  border-radius: 10rpx;
+}
+.servertitle {
+  padding-left:25rpx;
+ font-size: 35rpx;
+ color: #575c50;
+ font-weight: bold;
+padding-top: 15rpx;
+}
+
+
+.forum-list {
+  width: 100%;
+  height: 100%;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.forum-card {
+  width: 94%;
+  height: auto;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  padding: 10rpx;
+  padding-top: 15rpx;
+  border-radius: 15rpx;
+}
+
+.card-first {
+  width: 100%;
+  height: 80rpx;
+}
+
+.bloger-img {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.bloger-name {
+  font-size: 30rpx;
+  margin-left: 5rpx;
+  color: #586B94;
+  float:left
+}
+
+.role {
+  height: 35rpx;
+  background-color: #1d975c;
+  color: white;
+  font-size: 25rpx;
+  float:left;
+  text-align: center;
+  border-radius: 5rpx;
+  width: 90rpx;
+  margin-left: 10rpx;
+  margin-top: 5rpx;
+}
+
+.time {
+  color: rgb(182, 179, 179);
+  font-size: 28rpx;
+  float: left;
+  margin-top: 15rpx;
+}
+
+.card-second {
+
+  width: 97%;
+  margin: 0 auto;
+  margin-top: 15rpx;
+  
+}
+
+.blogcontent {
+  margin-left: 105rpx;
+  margin-top: -5rpx;
+}
+
+.ques-title1 {
+  font-size: 28rpx;
+  margin-left: 90rpx;
+margin-top: -50rpx;
+}
+
+.ques-photo {
+  margin-top: 15rpx;
+  /* justify-content:space-between; */
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: -7rpx;
+}
+
+.photo {
+  width: 170rpx;
+  height: 190rpx;
+  margin-left: 7rpx;
+  border-radius: 5rpx;
+}
+
+.replay-height {
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+
+
+.foot {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  line-height: 100rpx;
+}
+
+.add-wrap {
+  width: 100rpx;
+  height: 100rpx;
+  z-index: 99999;
+  bottom: 50rpx;
+  margin-left: 630rpx;
+  position: fixed;
+
+}
+
+
+
+
+
+
+
+
+

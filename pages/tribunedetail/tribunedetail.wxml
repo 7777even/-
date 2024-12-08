@@ -1,0 +1,121 @@
+<view id="tribunedetail">
+  <view class="message">
+    <view style="float: left;">
+      <image src="{{postdetail.avatarUrl}}" style="width:90rpx; height:90rpx;border-radius: 50%;"></image>
+    </view>
+    <view style="float:left ;margin-left:15rpx ;margin-top:10rpx;">
+      <view style="font-size: 30rpx;">
+        {{postdetail.username}}
+      </view>
+      <view style="color:#ccc; font-size: 26rpx; margin-top: 5rpx;">
+        {{postdetail.createTime}}
+      </view>
+    </view>
+    <view class="btn" style="background-color:#1d975c; color:white;border: none;" bindtap="guanzhu" wx:if="{{ guanzhu}}">
+      关注
+    </view>
+    <view class="btn" style="font-size:20rpx;background-color:rgb(156, 156, 156); color:white;border: none;"
+    wx:if="{{cancle}}" bindtap="guanzhu" >取消关注
+    </view>
+  </view>
+  <view class="content">
+    <view class="textcontent" style="margin-left: 70rpx;">
+      {{postdetail.content}}
+    </view>
+    <view style="margin-top: 15rpx;margin-left: 70rpx; width:90%;height:auto;display: flex;flex-wrap: wrap;">
+      <view class="photos" wx:for="{{postdetail.photos}}" wx:key="index">
+        <image src="{{item}}" style="width:190rpx;height:230rpx;margin-right: 20rpx;">
+        </image>
+      </view>
+    </view>
+
+  </view>
+  <view class="home-header-line"></view>
+  <view style="margin-left: 20rpx; font-size: 30rpx; font-weight: 600;margin-top: 20rpx;">
+    评论({{postdetail.comments.length}})
+  </view>
+  <!-- 评论 -->
+  <view>
+    <view class="replay" wx:for="{{postdetail.comments}}" wx:key="index" style="margin-top: 50rpx;">
+      <view class="message">
+        <view style="float: left;">
+          <image src="{{item.avatarUrl}}" style="width:75rpx; height:75rpx;border-radius: 50%;"></image>
+        </view>
+        <view style="float:left ;margin-left:15rpx ;margin-top:1rpx;">
+          <view style="font-size: 30rpx;margin-top: 10rpx;margin-left: 10rpx;font-size: 30rpx;">
+            {{item.username}}
+          </view>
+
+        </view>
+
+      </view>
+      <view>
+        <view class="replaycontent" style="margin-top: -10rpx;">
+          {{item.content}}
+        </view>
+      </view>
+      <view class="replay-son" wx:if="{{item.commentKidNum==0 ? false :true}}">
+                <view wx:for="{{item.kidComments}}" wx:key="index" wx:for-item="comment" wx:if="{{index<4}}"><a href="#">{{comment.username}}</a> <text> : {{comment.content}}</text> </view>
+                <view class="totalreplay-son" bindtap="kidreply" data-id="{{item.id}}">
+                  共{{item.commentKidNum}}条回复 >
+                </view>
+              </view>
+
+
+      <view style="color:#ccc; font-size: 26rpx; margin-top: 10rpx;float :left;margin-left: 110rpx; ">
+        {{item.createTime}}
+      </view>
+   
+      <view bindtap="like" data-id="{{item.id}}">
+        <view style="float: right;margin-top: 10rpx;margin-right: 10rpx;">{{item.likeNum}}</view>
+        <image src="{{item.isLike === 0 ? '../../image/tab/dianzan.png' : '../../image/tab/dianzanY.png'}}" style="width:50rpx;height:50rpx;float: right;margin-right: 15rpx;">
+        </image>
+       
+      </view>
+
+
+      <view>
+      </view>
+    </view>
+
+
+  </view>
+  <view style="text-align: center; margin-top: 100rpx;font-size: 30rpx;color: rgb(151, 150, 150);" wx:if="{{postdetail.comments.length==0}}">暂无评论</view>
+  <view style="width:100%;height:180rpx"></view>
+  <view class="bottom" style="bottom: {{keyBoardHeight}}rpx;">
+    <view class="home-header-line"></view>
+
+    <view class="replaybox">
+      <view class="replayinput" style=" width:{{(keyBoardHeight > 0) ||  send   ? 480 : 320}}rpx">
+        <image src="/image/tab/idea.png" style="width:40rpx;height:40rpx;margin-right:20rpx;margin-top: -5rpx;"></image>
+        <input type="text" placeholder="说一下你的想法" value="{{searchinput}}" bindinput="inputvalue" placeholder-style="font-size:26rpx"  bindfocus="foucus" bindblur="blur" style="font-size: 28rpx;"></input>
+      </view>
+    </view>
+   
+    <view class="replaybtn" wx:if="{{(keyBoardHeight > 0) ||  send ? false:true }}">
+  
+      <view >
+        <button style="float: left;margin-left: 0rpx; padding:0rpx;margin-top: -15rpx;" open-type="share">  <image src="/image/tab/zhuangfa.png" style="width:45rpx;height:45rpx;margin-top: -20rpx;"></image>
+        <view style="font-size: 24rpx; color: #ccc; margin-top: -40rpx;">转发</view>
+</button>
+      
+      </view>
+      <view>
+        <image src="/image/tab/replay.png" style="width:55rpx;height:55rpx;"></image>
+        <view style="font-size: 24rpx; color: #ccc; margin-top: -10rpx;text-align: center;">{{postdetail.commentCounts}}</view>
+
+      </view>
+      <view>
+        <image src="/image/tab/dianzaneasy.png" style="width:50rpx;height:50rpx"></image>
+        <view style="font-size: 24rpx; color: #ccc; margin-top: -9rpx;margin-left: 15rpx;">{{postdetail.likeNum}}</view>
+      </view>
+
+
+
+    </view>
+    <view wx:if="{{keyBoardHeight > 0 ? true:false || send}}" style="width:150rpx;height:60rpx;border-radius: 30rpx;background-color: #156d42;float: left;margin-left: 250rpx;text-align: center;color: white;line-height: 60rpx;margin-top: 15rpx;" bindtap="sendcomment">发送</view>
+
+
+
+  </view>
+</view>

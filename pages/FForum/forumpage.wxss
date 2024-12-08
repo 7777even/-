@@ -1,0 +1,215 @@
+#id{
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  background-color: rgb(243, 237, 237);
+}
+.height{
+  width:100%;
+  height:190rpx;
+}
+.header{
+  width:100%;
+  height:190rpx;
+  background-color: #1d975c;
+  position: fixed;
+}
+.search{
+  width:80%;
+  height:75rpx;
+ background-color: rgba(255, 255, 255,0.9);
+ margin:0 auto;
+ border-radius: 35rpx;
+ padding-left:15rpx;
+ font-size: 35rpx;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ border: 1rpx solid #c0bfbf;
+}
+.tab{
+  display: flex;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  
+}
+.tab view{
+  background-color: #1d975c;
+  border-radius: 30rpx;
+  width:120rpx;
+  height:50rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: white;
+
+  margin-right: 20rpx;
+}
+/*分割线样式*/
+
+.home-header-line {
+background-color: #e0e3da;
+opacity: 0.4;
+width:100%;
+height:2rpx;
+  margin-top: 20rpx;
+  }
+  .apart{
+    display: flex;
+    margin-left:30rpx;
+    margin-top: 15rpx;
+  }
+  .apart-title{
+    color:white;
+    margin-right: 40rpx;
+    height:60rpx;
+    width:90rpx;
+    text-align: center;
+  }
+  .active-title{
+    color:white;
+    height:60rpx;
+    width:90rpx;
+    text-align: center;
+    margin-right: 40rpx;
+    border-bottom: 8rpx solid white;
+  }
+  .publish{
+    color: white;
+    margin-left: 250rpx;
+    font-size: 35rpx;
+    margin-top: 3px;
+  
+  }
+  .forum-list{
+    width:100%;
+    height:100%;
+    margin-top: 40rpx;
+    margin-bottom: 30rpx;
+  }
+  .forum-card{
+    width:94%;
+    height:auto;
+    background-color: #fff;
+    box-shadow: 0 4rpx 24rpx 0 rgb(190, 190, 190);
+    margin: 0 auto;
+    margin-top: 25rpx;
+    padding:10rpx;
+    padding-top:15rpx;
+    border-radius: 15rpx;
+  }
+  .card-first{
+ width:100%;
+ height:80rpx;
+  }
+  .bloger-img{
+    width:90rpx;
+    height:90rpx;
+    border-radius: 30rpx;
+    float:left;
+  }
+  .bloger-name{
+    font-size: 32rpx;
+    margin-left: 25rpx;
+    margin-top: 10rpx;
+    float:left;
+    color: #586B94;
+  }
+  .role{
+   padding-left:8rpx;
+   padding-right:8rpx;
+    height:35rpx;
+    background-color: #1d975c;
+    color: white;
+    font-size: 25rpx;
+    text-align: center;
+    border-radius: 15rpx;
+    margin-left: 20rpx;
+    margin-top: 15rpx;
+    float:left;
+  }
+  .time{
+color:rgb(182, 179, 179);
+font-size: 28rpx;
+float:left;
+margin-left: 105rpx;
+margin-top: 15rpx;
+  }
+.card-second{
+  width:97%;
+  margin: 0 auto;
+}
+.blogcontent{
+  margin-left: 105rpx;
+  margin-top: -20rpx;
+}
+.ques-title{
+  font-size: 30rpx;
+ 
+}
+.ques-photo{
+
+  margin-top: 15rpx;
+  /* justify-content:space-between; */
+  flex-wrap: wrap;
+ display: flex;
+ margin-left: -7rpx;
+}
+.photo {
+  width:180rpx;
+  height:200rpx;
+  margin-left: 7rpx;
+  border-radius: 5rpx;
+}
+.replay-height{
+  height:50rpx;
+  margin-top: 15rpx;
+}
+.ques-reply{
+display: flex;
+float: right;
+}
+.replaynum{
+  margin-right: 25rpx;
+}
+.collectnum , .replaynum{
+  font-size: 30rpx;
+  text-align: center;
+  height:50rpx;
+  line-height: 65rpx;
+  text-align: center;
+  color: rgb(150, 150, 150);
+}
+.replayimg{
+  width:45rpx;
+  height:53rpx;
+ margin-top: -3rpx;
+  margin-right: 10rpx;
+}
+.collectimg{
+height:50rpx;
+width:50rpx;
+margin-top: 5rpx;
+margin-right: 10rpx;
+}
+.foot{
+  width:100%;
+  height:100rpx;
+  background-color: #fff;
+  position:fixed;
+   bottom:0;
+   line-height: 100rpx;
+}
+.add-wrap {
+  width:100rpx;
+  height:100rpx;
+  z-index: 99999;
+bottom: 50rpx;
+margin-left: 630rpx;
+  position: fixed;
+
+}
+
+
+
+  

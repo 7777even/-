@@ -1,0 +1,121 @@
+
+<view id="tribune">
+
+<!-- 头部导航栏 -->
+<view class="height">
+  <view class="header">
+    <view class="search">
+      <image src="/image/tab/search.png" style="width:50rpx;height:50rpx;margin-right:20rpx"></image>
+      <input type="text" placeholder="搜索用户名/帖子关键字" bindconfirm="bindKeyInput"></input>
+    </view>
+
+  </view>
+</view>
+
+<!-- 动态收藏 -->
+<view class="forum-list" wx:if="{{dongtai}}">
+  <!-- 一个问答 -->
+
+  <view class="forum-card">
+    <view class="card-first" bindtap="getforumdetail2" data-id="{{item.id}}">
+      <image src="/image/tab/photo.jpg" class="bloger-img"></image>
+      <view style="float:left;margin-left: 15rpx;">
+        <view class="bloger-name">scarlett</view>
+        <view class="role">{{item.roles=="user" ? "用 户" : "专 家"}}</view>
+      </view>
+
+    </view>
+    <view class="card-second">
+      <view class="ques-title" bindtap="getforumdetail2" data-id="{{item.id}}">
+        好饿呀
+      </view>
+      <view style="margin-top: 15rpx;margin-left: 70rpx;">
+
+        <image src="/image/tab/zongzi.jpg" style="width:200rpx;height:190rpx;margin-right: 5rpx;"></image>
+
+        <image src="/image/tab/zongzi.jpg" style="width:200rpx;height:190rpx;margin-right: 5rpx;"></image>
+
+        <image src="/image/tab/zongzi.jpg" style="width:200rpx;height:190rpx"></image>
+      </view>
+      <view class="ques-photo" bindtap="getforumdetail2" data-id="{{item.id}}">
+        <view wx:for="{{item.photo}}" wx:key="index" class="photo" wx:if="{{index<3}}">
+          <image src="{{item}}" class="photo"></image>
+        </view>
+
+      </view>
+      <view class="replay-height">
+
+        <view style="margin-top: 20rpx; display: flex;margin-left: 60rpx;">
+          <image src="/image/tab/zhuangfa.png" style="width:45rpx;height:45rpx;margin-left: 10rpx;"></image>
+          <image src="/image/tab/replay.png" style="width:55rpx;height:50rpx;margin-left: 200rpx;margin-top: 3rpx;"></image>
+          <image src="/image/tab/dianzaneasy.png" style="width:48rpx;height:48rpx ;margin-left:200rpx;">
+          </image>
+        </view>
+        <view class="home-header-line"></view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<!-- 百科收藏 -->
+<view wx:for="{{diseaselist}}" bindtap="todetail" wx:if="{{baike}}" wx:key="index" >
+  <view class="card" bindtap="todetail2" data-id="{{item.id}}"  data-index="4">
+<image src=" {{item.photo[0]}}" class="card-left">
+  </image>
+  <view class="card-right">
+    <view class="card-right-title">
+      {{item.name}}
+    </view>
+    <view class="card-right-text">
+      {{item.introduction}}
+    </view>
+    <view class="card-right-class">
+      {{item.category ===0 ? "病" : "虫"}} 害
+    </view>
+
+  </view>
+</view>
+</view>
+
+<!-- 问答收藏 -->
+<view wx:for="{{wendalist}}" wx:key="index" wx:if="{{wenda}}">
+  <view class="forum-card">
+    <view class="card-first" data-id="{{item.id}}">
+      <image src="{{item.avatarUrl}}" class="bloger-img"></image>
+      <view class="bloger-name">{{item.username}}</view>
+      <view class="role">{{item.roles=="user" ? "用 户" : "专 家"}}</view>
+
+    </view>
+    <view class="card-second">
+      <view class="blogcontent">
+        <view class="ques-title" bindtap="getforumdetail2" data-id="{{item.id}}">
+          {{item.description}}
+        </view>
+        <view class="ques-photo" bindtap="getforumdetail2" data-id="{{item.id}}">
+          <view wx:for="{{item.photo}}" wx:key="index" class="photo" wx:if="{{index<3}}">
+            <image src="{{item}}" class="photo"></image>
+          </view>
+
+        </view>
+      </view>
+
+
+      <view class="replay-height">
+        <view class="time">{{item.createTime}}</view>
+        <view class="ques-reply" data-id="{{item.id}}">
+          <image src="/image/tab/HF.png" class="replayimg"></image>
+          <view class="replaynum">{{item.commentCounts}}</view>
+          <image class="collectimg" src="{{item.shoucangstatus === true ? '../../image/tab/shouc.png' : '../../image/tab/shoucY.png'}} " bindtap="shoucang" data-id="{{item.id}}" data-index="{{index}}"></image>
+          <view>{{item.shoucangstatus}}</view>
+          <view class="collectnum">{{item.storeCounts}}</view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>
+
+</view>

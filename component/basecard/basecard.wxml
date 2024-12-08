@@ -1,0 +1,15 @@
+<view class="card" bindtap="todetail">
+<image src="{{baseData.photo[0]}}" class="card-left" ></image>
+<view class="card-right">
+<view class="card-right-title">
+{{baseData.name}}
+</view>
+<view class="card-right-text">
+{{baseData.introduction}}
+</view>
+<view class="card-right-class">
+{{baseData.category ===0 ? "病" : "虫"}} 害
+</view>
+
+</view>
+</view>

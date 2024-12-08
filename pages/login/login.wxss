@@ -1,0 +1,153 @@
+page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+
+}
+
+.title{
+  margin-top: 190rpx;
+  font-size: 70rpx;
+  font-weight: 800;
+  color: #169635;
+}
+.logocontain{
+  margin-top: 50rpx;
+  border-color: #979696;
+  border-radius: 50%;
+  box-shadow: 0rpx 0rpx 10rpx 10rpx rgba(0,0,0,0.1) ;
+  width:150rpx;
+  height:150rpx;
+}
+.logo{
+  width:150rpx;
+  height:150rpx;
+  border-radius: 50%;
+  
+}
+.loginBox {
+  position: fixed;
+  top:1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  width: 90%;
+  height: 1000rpx;
+  border-radius: 20rpx;
+  opacity: 0.95;
+}
+.loginBox .topNav .navItem {
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(245, 240, 255);
+}
+
+.loginBox .topNav .navItemActive {
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 50%;
+  height: 100%;
+  background-color: #c0bfbf;
+  color: #979696;
+}
+
+.loginBox .box {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 80%;
+  height: 580rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  padding-top: 50rpx;
+}
+
+
+.loginBox .box image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.loginBox .box .loginImg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 10%;
+}
+
+.loginBox .box .boxItem input {
+margin-left: 15rpx;
+font-size: 30rpx;
+}
+
+.loginBox .box .boxItem .checkCode{
+  text-align: center;
+  width: 20%;
+  font-size: 24rpx;
+  margin-right: -110rpx;
+  margin-top: -10rpx;
+  margin-bottom: -10rpx;
+  background-color: #e3dff3;
+}
+
+.loginBox .box .boxItem {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15rpx;
+  background-color: #ffffff;
+  border: 1rpx solid #cfcece;
+  width:85%;
+  height:65rpx;
+  border-radius: 45rpx
+}
+
+.loginbtn{
+background-color: none;
+border:none;
+background-color:#169635;
+margin-top: 10%;
+border-radius: 45rpx;
+width:490rpx !important;
+height:95rpx  !important;
+color:#ffffff;
+font-weight: normal;
+font-size:40rpx;
+}
+.register {
+margin-top: 30rpx;
+margin-left: 65%;
+}
+.loginBox .box .loginRight{
+  margin-top: 10%;
+  width: 90rpx;
+  height: 90rpx
+}
+
+.loginBox .ttp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 580rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  padding-top: 50rpx;
+}
+.loginBox .ttp .ttptitle{
+  font-size:35rpx;
+  color:#51534A;
+}
+.loginBox .ttp image{
+width:100rpx;
+height:100rpx;
+margin-top: 30rpx;
+margin-right: 20rpx;
+}

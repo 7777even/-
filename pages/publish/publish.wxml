@@ -1,0 +1,103 @@
+<view id="publish">
+  <view class="steps_box">
+
+
+<block class="block-step" wx:for="{{stepList}}" wx:key="index">
+  <view class="view_item">
+    <!-- 打钩 -->
+    <icon wx:if="{{stepNum>=index+1?true:false}}" type="success" size="24" color="#1d975c"/>
+    <!-- 圆圈数字 -->
+    <view wx:else> {{index+1}} </view>
+    <text style="color:{{stepNum>=index+1?'#00bd3f':'#909090'}}">{{item.name}}</text>
+  </view>
+  
+  <!-- 横线 -->
+  <view wx:if="{{index==stepList.length-1?false:true}}"
+    class="view_line {{stepNum<=index+1?'line_bgcolor1':'line_bgcolor'}} "></view>
+</block>
+
+</view>
+<!-- 问题描述 -->
+<view wx:if="{{stepNum===0}}">
+  <view class="tiaobox" >
+    <view class="tiao"></view>
+    <view class="partitle" >问题描述</view>
+  </view>
+  <textarea class="textareabox" bindinput="quesdecr">
+</textarea></view>
+
+
+<!-- 上传图片 -->
+<view wx:if="{{stepNum===1}}">
+  <view class="tiaobox" >
+    <view class="tiao"></view>
+    <view class="partitle">上传图片</view>
+  </view>
+  <view class="imgbox">
+  <view wx:for="{{imglist}}" wx:key="index">
+    <image class="showimg" src="{{item}}" catchtap="handleImagePreview" lazy-load="true" data-index='{{index}}'></image>
+    <view class="addPic_close" catchtap="deleteImage" data-index='{{index}}'>×</view>
+  </view>
+  <view bindtap="myimg" class="addimg">
+    +
+  </view>
+  </view>
+ </view>
+  
+<!-- 其他信息 -->
+<view wx:if="{{stepNum===2}}">
+  <view class="tiaobox" >
+    <view class="tiao"></view>
+    <view class="partitle">信息补充</view>
+  </view>
+  <view class="small-title" >
+    近期用肥用药情况
+    </view>
+    <textarea class="textareabox" bindinput="situation">
+    
+</textarea>
+<view class="small-title">
+    发生面积
+    </view>
+    <view class="select-area">
+    <radio-group bindchange="bindChange" class="radiolist">
+    <radio color="#1d975c" value="0" name="一两株">一两株</radio>
+    <radio color="#1d975c" value="1" name="小范围">小范围</radio>
+    <radio color="#1d975c" value="2"  name="成片或整田"> 成片或整田</radio>
+    </radio-group>
+   
+    </view>
+    <view class="small-title">
+ 近期天气情况
+    </view>
+    <view class="select-area">
+    <radio-group bindchange="bindChange2" class="radiolist">
+    <radio color="#1d975c" value="0" name="无异常">无异常</radio>
+    <radio color="#1d975c" value="1" name="高湿">高湿</radio>
+    <radio color="#1d975c" value="2"  name="低温"> 低温</radio>
+    <radio color="#1d975c" value="3" name="高温">高温</radio>
+    <radio color="#1d975c" value="4" name="干旱">干旱</radio>
+    <radio color="#1d975c" value="5"  name="连续降雨"> 连续降雨</radio>
+    <radio color="#1d975c" value="6" name="霜冻">霜冻</radio>
+    <radio color="#1d975c" value="7" name="其他" class="last">其他</radio>
+   
+    </radio-group>
+   
+    </view>
+</view>
+
+
+
+
+<view class="nextstep">
+  <button bindtap="numSteps" wx:if="{{stepNum===0 || stepNum===1}}">下一步</button>
+  <button bindtap="numSteps" wx:if="{{stepNum===2}}">发布</button>
+</view>
+
+
+ 
+
+</view>
+
+
+

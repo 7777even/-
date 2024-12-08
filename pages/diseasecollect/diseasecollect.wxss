@@ -1,0 +1,44 @@
+#base{
+  width: 100%;
+  height: 100vh;
+  background-color: #fafaf8;
+}
+
+.header{
+  background-color:#1d975c;
+  width:100%;
+  height:140rpx;
+  padding-top:40rpx;
+ 
+}
+.search{
+  width:80%;
+  height:75rpx;
+ background-color: rgb(255, 255, 255);
+ margin:0 auto;
+ border-radius: 35rpx;
+ padding-left:15rpx;
+ font-size: 35rpx;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ border: 1rpx solid #c0bfbf;
+}
+.tab{
+  display: flex;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  
+}
+.tab view{
+  background-color: #1d975c;
+  border-radius: 30rpx;
+  width:130rpx;
+  height:60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: white;
+  margin-right: 20rpx;
+}
+

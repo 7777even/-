@@ -1,0 +1,6 @@
+{
+  "usingComponents": {  "van-steps": "@vant/weapp/steps/index"},
+  "navigationBarTitleText": "提问",
+  "navigationBarBackgroundColor": "#1d975c",
+  "navigationBarTextStyle": "white"
+}

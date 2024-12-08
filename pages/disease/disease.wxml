@@ -1,0 +1,60 @@
+<view id="disease">
+
+<view class="title {{scrollTop>100?'totop':''}}" >
+<image src="/image/tab/返回.png" bindtap="returnbase" ></image>
+<view >{{diseaseInfo.name}}</view>
+</view>
+<swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="#fff" circular="{{true}}">
+<block wx:for="{{diseaseInfo.photo}}" wx:key="index">
+<swiper-item class="swiper-item">
+
+<image src="{{item}}" class="swiper-item-img" ></image>
+
+</swiper-item>
+</block>
+</swiper>
+
+<!-- 病虫害简介 -->
+<view class="tiaobox">
+  <view class="tiao">
+</view>
+ <view class="partitle">病虫害简介</view>
+</view>
+<view class="info-card">  
+
+{{diseaseInfo.introduction}}
+</view>
+<!-- 解决方式 -->
+<view class="tiaobox">
+  <view class="tiao">
+</view>
+<view class="partitle">解决措施</view>
+</view>
+<view style="width:100%;margin-bottom: 120rpx;">
+  <view class="info-card" wx:for="{{diseaseInfo.solution}}" wx:key="index"> 
+<view style="width:35rpx;height:35rpx;background-color:#1d975c ;float: left;border-radius: 50%;margin-top: 5rpx;margin-right: 10rpx;"></view> 
+{{item}}
+</view></view>
+
+
+<van-goods-action>
+  <van-goods-action-icon icon="share-o" text="分享"  bind:click="onClickIcon"  open-type="share"/>
+  <view style="width:78%; margin-left:30rpx">
+    <van-goods-action-button
+    text="加入收藏夹"
+    type="warning"
+    bind:click="onClickButton"
+    color="#1d975c"
+    wx:if="{{diseaseInfo.isStore==0}}"
+  />
+       <van-goods-action-button
+    text="已加入收藏夹"
+   
+    bind:click="onClickButton"
+    color="#f7b27a"
+   wx:if="{{diseaseInfo.isStore==1}}"
+  /> 
+  </view>
+</van-goods-action>
+
+</view>

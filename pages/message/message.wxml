@@ -1,0 +1,51 @@
+<page>
+<view class="list">
+<view class="inter">
+  <view>
+<image src="/image/tab/huifu.png" mode="widthFix"></image>
+<view class="text">回复</view>
+</view>
+<view>
+  <image src="/image/tab/dianzan2.png" mode="widthFix"></image>
+<view  class="text">点赞</view>
+</view>
+<view bindtap="openlist">
+  <image src="/image/tab/guanzhu.png" mode="widthFix"></image>
+<view  class="text">关注</view>
+</view></view>
+
+</view>
+<!-- 关注列表 -->
+<van-action-sheet show="{{ show }}" title="关注列表（30人）"   bind:close="onClose" className="liststyle">
+  <block>
+<view class="user-list" bindtap="chat">
+<image src="/image/tab/addfriend.png" class="face"></image>
+<view class="nick-name"> 酱酱酱
+</view>
+<view class="role">专家
+</view>
+</view>
+<view class="user-list"  bindtap="chat">
+<image src="/image/tab/addfriend.png" class="face"></image>
+<view class="nick-name"> 酱酱酱
+</view>
+<view class="role">专家
+</view>
+<view class="cancle">取消关注
+</view>
+</view>
+</block>
+</van-action-sheet>
+<!-- 聊天信息 -->
+<view class="chatmess">
+  <view class="user-list2" bindtap="chat"  wx:for="{{userlist}}" wx:key="index" data-id="{{item.uid}}">
+<image src="{{item.avatarUrl}}" class="face"></image>
+<view class="nick-name"> {{item.username}}
+</view>
+<view class="role">用户
+</view>
+</view>
+<view class="divLine"></view>
+</view>
+
+</page>

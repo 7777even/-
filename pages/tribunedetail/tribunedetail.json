@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "navigationBarTitleText": "帖子详情",
+  "navigationBarBackgroundColor": "#1d975c",
+  "navigationBarTextStyle": "white"
+
+
+}

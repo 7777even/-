@@ -1,0 +1,310 @@
+#mine{
+  width:100%;
+  height:100%;
+  background-color: #fafaf8;
+}
+.headercanner{
+  width:100%;
+  height:395rpx;
+  background-color: #1d975c;
+  padding-top:10rpx;
+}
+.header{
+  width:100%;
+  height:425rpx;
+  background-color: #1d975c;
+  padding-top:10rpx;
+  border-radius: 200px/20px;
+  /* border-bottom-left-radius:50rpx ;
+  border-bottom-right-radius:50rpx ; */
+}
+.headerbody{
+  width:90%;
+  height:300rpx;
+  margin:0 auto;
+  
+}
+.first{
+  width:100%;
+  height:120rpx;
+}
+.image{
+  width:100rpx;
+  height:100rpx;
+  float: left;
+  border-radius: 50%;
+  text-align: center;
+  border:#8caf85 5rpx solid ;
+  margin-left: 30rpx;
+  line-height: 90rpx;
+}
+.image image{
+  width:95rpx;
+  height:95rpx;
+border-radius: 50%;
+/* vertical-align: middle !important; */
+margin-top: 2rpx;
+margin-left: 1rpx;
+}
+.personalmes{
+  margin-left: 30rpx;
+  float: left;
+  margin-top: 10rpx;
+}
+.username{
+  color:rgb(235, 230, 230);
+  font-size: 28rpx;
+}
+.role{
+  color:white;
+  background-color: #7fab6e;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  width:80rpx;
+}
+.edit{
+float: right;
+
+}
+.exit{
+  float: right;
+  }
+
+.editpicture{
+  width:55rpx;
+  height:55rpx;
+  text-align: center;
+  margin-left: 25rpx;
+}
+.exitpicture{
+  width:55rpx;
+  height:50rpx;
+  text-align: center;
+  margin-left: 25rpx;
+  margin-top: 3rpx;
+}
+.second{
+  display: flex;
+  width:100%;
+  height:120rpx;
+margin-top: 35rpx;
+  justify-content: space-around;
+}
+.third{
+
+  width:85%;
+  height:130rpx;
+  background-color: rgb(248, 243, 243);
+  opacity: 0.7;
+  margin: 0 auto;
+  border-radius: 200px/13px;
+  margin-top: 27rpx;
+  text-align: center;
+  color:green;
+  line-height: 130rpx;
+  font-size: 40rpx;
+ font-weight: bolder;
+}
+.shibie view{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-style: 35rpx;
+}
+.shibie text{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-size: 30rpx;
+}
+.wenda view{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-style: 35rpx;
+}
+.wenda text{
+  text-align: center;
+  color:rgb(233, 231, 231);
+  font-size: 30rpx;
+}
+.main{
+  width:90%;
+  margin:0 auto;
+  margin-top: 70rpx;
+}
+.mainFirst{
+background-color: #fbffff;
+  width:100%;
+  height:450rpx;
+  border-radius: 10rpx;
+}
+.servertitle , .othertitle{
+  padding-left:25rpx;
+ font-size: 36rpx;
+ color: #575c50;
+ font-weight: bold;
+padding-top: 15rpx;
+}
+.server{
+ display: flex;
+ justify-content: space-around;
+ margin-top: 30rpx;
+ align-items: flex-start;
+}
+.server2{
+
+  display: flex;
+  margin-top: 30rpx;
+  justify-content: flex-start;
+  margin-left: 30rpx;
+ }
+.serveritem{
+  text-align: center;
+}
+.serveritem view{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #566552;
+}
+.image1{
+  width:65rpx;
+  height:65rpx;
+  margin-top: 5rpx;
+}
+
+.image2{
+  width:78rpx;
+  height:75rpx;
+}
+.image3{
+  width:60rpx;
+  height:60rpx;
+  margin-top: 10rpx;
+}
+.mainSecond{
+  background-color: #fbffff;
+  width:100%;
+  height:450rpx;
+  border-radius: 10rpx;
+  margin-top: 50rpx;
+}
+.otheritem{
+  width:90%;
+  height:50rpx;
+  margin-left: 30rpx;
+margin-top: 30rpx;
+}
+.otheritem image{
+  width:50rpx;
+  height:50rpx;
+  margin: 0 auto;
+  text-align:center;
+  float:left
+}
+.itemname{
+  font-size: 30rpx;
+  color: #918f8f;
+  line-height: 50rpx;
+  float:left;
+  margin-left: 25rpx;       
+
+}
+.jiantou{
+ float:right;
+  font-size: 35rpx;
+  color: #c2c1c1;
+
+}
+button::after {
+  border: none;
+
+      }
+
+      button {
+
+  background-color: #fff;
+
+     }
+     .liststyle{
+      margin-bottom: 30rpx;
+      height:30rpx
+    }
+    .face{
+      width:90rpx;
+      height:90rpx;
+      border-radius: 50%;
+      margin-right: 30rpx;
+      float: left;
+    }
+    .user-list{
+   
+      /* margin:30rpx 20rpx 0rpx 20rpx; */
+    margin-left: 20rpx;
+      margin-bottom: 30rpx;
+    }
+    .nick-name{
+    margin-top: 22rpx;
+    font-size: 33rpx;
+    float: left;
+    }
+    .role{
+      margin-top: 25rpx;
+      font-size: 28rpx;
+      background-color:var(--themeColor);
+      margin-left: 30rpx;
+      border-radius: 10rpx;
+      height:30rpx;
+      line-height: 30rpx;
+      padding: 8rpx;
+      color: white;
+      float: left;
+     
+    }
+    .cancle{
+    width:120rpx;
+    height:40rpx;
+    line-height: 40rpx;
+    margin-top: 25rpx;
+    
+    border-radius: 15rpx;
+    margin-left: auto;
+    margin-right:20rpx;
+    text-align: center;
+    }
+    .van-action-sheet__header{
+      position: fixed;
+      width:100%;
+      border-radius: 25rpx;
+      background-color: #fff;
+    }
+    .nullpicture{
+      width: 300rpx;
+      height:400rpx;
+      margin: 0 auto;
+      
+    }
+    .nullpicture image{
+      width: 300rpx;
+      height:300rpx;
+    }
+    .nullpicture view{
+      font-size: 30rpx;
+      color: #ccc;
+      text-align: center;
+    }
+    .nullpicture1{
+      width: 300rpx;
+      height:400rpx;
+      margin: 0 auto;
+      margin-bottom: 80rpx;
+      
+    }
+    .nullpicture1 image{
+      width: 300rpx;
+      height:300rpx;
+    }
+    .nullpicture1 view{
+      font-size: 30rpx;
+      color: #ccc;
+      text-align: center;
+    }

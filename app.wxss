@@ -1,0 +1,16 @@
+
+page{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  /* 主题颜色，通过变量来实现
+  1、less中存在变量这个知识
+  2、原生css和wxss也是支持变量 */
+
+  /* 定义主题颜色变量 */
+  --themeColor:#1d975c; 
+  font-size: 28rpx;
+}
+
+
+

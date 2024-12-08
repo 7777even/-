@@ -1,0 +1,188 @@
+<view id="forumdetail">
+  <view class="title {{scrollTop>100?'totop':''}}">
+    <image src="/image/tab/返回.png" bindtap="returnbase"></image>
+    <view>{{message.username}}</view>
+  </view>
+  <!-- //图片轮播 -->
+  <swiper class="swiper" indicator-dots="{{true}}" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="#fff" circular="{{true}}">
+    <block wx:for="{{message.photo}}" wx:key="index">
+      <swiper-item class="swiper-item">
+        <image src="{{item}}" class="swiper-item-img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 问题描述 -->
+  <view>
+    <view class="tiaobox">
+      <view class="tiao"></view>
+      <view class="partitle">问题描述</view>
+    </view>
+    <view class="ques-card">
+      {{message.description}}
+    </view>
+  </view>
+
+  <!-- 其他情况 -->
+  <view>
+    <view class="tiaobox">
+      <view class="tiao"></view>
+      <view class="partitle">其他信息</view>
+    </view>
+    <view class="ques-card">
+      <view> <text class="ques-title">近期用肥用药情况： </text> <text> {{message.feedingSituation}}</text></view>
+      <view> <text class="ques-title">发生面积： </text><text> {{message.size}}</text></view>
+      <view> <text class="ques-title">近期天气情况： </text><text> {{message.weather}}</text></view>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view>
+    <view class="tiaobox">
+      <view class="tiao"></view>
+      <view class="partitle">回复区</view>
+    </view>
+
+    <view class="replyclass">
+      <view wx:for="{{tabList}}" wx:key="index" style="background-color: {{active === item.id ? '#1d975c' : '#ccc'}}" bindtap="setAct" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+
+    <view class="replycontent">
+      <view class="replycontent-title">{{active === 0 ? "专家回答" : "用户回答"}} ({{commentnum}})</view>
+      <block wx:for="{{Comment}}" wx:key="index" wx:if="{{nonull}}">
+        <view class="replaylist">
+          <view class="rplay-user">
+            <view>
+              <image src="{{item.avatarUrl}}" class="userimg"></image>
+            </view>
+            <view class="right">
+              <view class="username"> {{item.username}} </view>
+              <view class="replay">{{item.content}}</view>
+              <view class="replay-son" wx:if="{{item.commentKidNum==0 ? false :true}}">
+                <view wx:for="{{item.commentKidVos}}" wx:key="index" wx:for-item="comment" wx:if="{{index<4}}"><a href="#">{{comment.username}}</a> <text> : {{comment.content}}</text> </view>
+                <view class="totalreplay-son" bindtap="kidreply" data-id="{{item.id}}">
+                  共{{item.commentKidNum}}条回复 >
+                </view>
+              </view>
+              <view class="bottomline">
+                <view class="replaytime">{{item.createTime}}</view>
+                <view class="huifu" bindtap="kidreply" data-id="{{item.id}}">
+                  <image src="/image/tab/huifu.png"></image>
+                  <view>{{item.commentKidNum}}</view>
+                </view>
+                <view class="like" bindtap="replaylike" data-id="{{item.id}}">
+                  <image src="/image/tab/dianzan.png"></image>
+                  <view>{{item.likeNum}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <view class="divLine"></view>
+
+        </view>
+      </block>
+
+      <view class="nullpicture" wx:if="{{isnull}}">
+        <image src="/image/tab/datanull.png"></image>
+        <view>
+          暂无{{active === 0 ? "专家回答" : "用户回答"}}
+        </view>
+      </view>
+
+
+
+
+      <!-- <view class="replaylist">
+        <view class="rplay-user">
+          <view>
+            <image src="/image/tab/photo.jpg" class="userimg"></image>
+          </view>
+          <view class="right">
+            <view class="username"> Scarlett </view>
+            <view class="replay">我认为，这个问题可能是因为天气的问题</view>
+
+            <view class="bottomline">
+              <view class="replaytime">2022-5-13 20:20</view>
+              <view class="huifu">
+                <image src="/image/tab/huifu.png"></image>
+                <view>22</view>
+              </view>
+              <view class="like">
+                <image src="/image/tab/dianzan.png"></image>
+                <view>22</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="divLine"></view>
+
+      </view> -->
+
+    </view>
+  </view>
+
+
+
+  <view style="height:100rpx"></view>
+</view>
+
+<!-- 二级评论 -->
+<view class="pub-comment" wx:if="{{showCommentadd}}" style="bottom:{{keyBoardHeight}}">
+
+  <view class="pub-left">
+    <input class="pub-input" confirm-type="send" placeholder="评论" bindinput="getinput" />
+  </view>
+  <view class="pub-button" bindtap="sendcomment">
+    发 送
+  </view>
+</view>
+<view class="replybtn" wx:if="{{scrollTop>150&&showoperationPannelIndex==0}}" catchtap="clickComment">回复</view>
+<van-action-sheet show="{{ show }}" title="回复列表（{{kidcommentnum}}条）" bind:close="onClose">
+  <view style="height:120rpx"></view>
+  <block>
+    <view class="nullpicture1" wx:if="{{kidisnull}}">
+      <image src="/image/tab/datanull.png"></image>
+      <view>
+        暂无回复
+      </view>
+    </view>
+  </block>
+
+  <view style=" max-height:700rpx ;">
+    <view wx:for="{{kidcomment}}" wx:key="index" class="all" wx:if="{{kidisnonull}}">
+      <view class="kidreplaylist">
+        <view class="rplay-user">
+          <view>
+            <image src="{{item.avatarUrl}}" class="userimg"></image>
+          </view>
+          <view class="right">
+            <view class="username"> {{item.username}} </view>
+            <view class="replay">{{item.content}}</view>
+            <view class="bottomline2">
+              <view class="replaytime">{{item.createTime}}</view>
+              <view class="huifu" bindtap="replaylike2" data-id="{{item.id}}">
+                <image src="/image/tab/dianzan.png"></image>
+                <view>{{item.likeNum}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="divLine"></view>
+
+      </view>
+    </view>
+    <view style="height:130rpx"></view>
+  </view>
+<!-- 子评论的评论框 -->
+  <view class="pub-comment" style="bottom: {{keyBoardHeight}};">
+    <view class="pub-left">
+      <input class="pub-input" type="text" placeholder="评论" bindinput="getinput" confirm-type="send" value="{{searchinput}}" />
+    </view>
+    <view class="pub-button" bindtap="sendcomment2">
+      发 送
+    </view>
+  </view>
+
+</van-action-sheet>

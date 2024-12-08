@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+
+  },
+  "navigationBarTitleText": "广场",
+  "navigationBarBackgroundColor": "#1d975c",
+  "navigationBarTextStyle": "black"
+
+}

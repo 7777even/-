@@ -1,0 +1,80 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "pages": [
+    "pages/login/login",
+    "Community/community/community",
+  
+  
+    "pages/publiart/publicart",
+    "pages/personal/personal",
+    "pages/Aboutus/Aboutus",
+    "Homepage/homepage/homepage",
+    "pages/FForum/forumpage",
+    "pages/collect/collect",
+    "pages/tribunedetail/tribunedetail",
+    "pages/disease/disease",
+    "pages/Precaution/Precaution",
+    "pages/tribune/tribune",
+    "pages/forumdetail/forumdetail",
+    "pages/dialogue/dialogue",
+    "pages/message/message",
+    "pages/base/base",
+    "pages/publish/publish",
+    "custom-tab-bar/index",
+    "Community/News/News",
+    "pages/userpage/userpage"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1d975c",
+    "navigationBarTitleText": "稻梦空间",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#237804",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#169635",
+    "position": "bottom",
+    "borderStyle": "black",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "Homepage/homepage/homepage",
+        "text": "拍照识别",
+        "iconPath": "/image/tab/canmer.png",
+        "selectedIconPath": "/image/tab/canmer-act.png"
+      },
+      {
+        "pagePath": "Community/community/community",
+        "text": "广场",
+        "iconPath": "/image/tab/community.png",
+        "selectedIconPath": "/image/tab/community-act.png"
+      },
+      {
+        "pagePath": "pages/Precaution/Precaution",
+        "text": "预警",
+        "iconPath": "/image/tab/Precaution.png",
+        "selectedIconPath": "/image/tab/Precaution-act.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/image/tab/Mes.png",
+        "selectedIconPath": "/image/tab/Mes-act.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/image/tab/person.png",
+        "selectedIconPath": "/image/tab/person-act.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,52 @@
+<view class="loginBox">
+<view class="nav"></view>
+  <view class="title">稻梦空间</view>
+ <view  class="logocontain"><image src="./asset/logo.jpg"  class="logo" mode="aspectFill"></image></view>
+  <!-- 登录 -->
+  <view class="box" wx:if="{{true}}">
+    <view class="boxItem">
+      <image src="./asset/phone.png"></image>
+      <input bindinput="phoneNumber" placeholder="请输入手机号" value="{{phoneNumber}}" />
+    </view>
+    <view class="boxItem">
+      <image style="width:40rpx;height:40rpx;margin-right:10rpx" src="./asset/password.png"></image>
+      <input bindinput="password" password="{{isPassword}}" placeholder="密码" value="{{password}}"/>
+
+    </view>
+    
+    <view class="register" bindtap="regist1" wx:if="{{DL}}">
+注册账号
+</view>
+<view class="register" bindtap="login1" wx:if="{{ZC}}">
+返回登录
+</view>
+    <button class="loginbtn" bindtap="login" wx:if="{{DL}}">登 录</button>
+    <button class="loginbtn" bindtap="regist" wx:if="{{ZC}}">注 册</button>
+  </view>
+  <view class="ttp" wx:if="{{true}}">
+  <view class="ttptitle">
+  ----第三方登录----
+  </view>
+  <view>
+<image src="./asset/weixin.png"  bindtap="getUserInfo"></image>
+<image src="./asset/qq.png"></image>
+  </view>
+  </view>
+  <!-- 注册 -->
+  <view class="box" wx:if="{{false}}">
+    <view class="boxItem">
+      <image src="./asset/phone.png"></image>
+      <input bindinput="phoneNumber" placeholder="请输入手机号" />
+    </view>
+    <view class="boxItem">
+      <image style="width:40rpx;height:40rpx;margin-right:10rpx" src="./asset/password.png"></image>
+      <input bindinput="password" password="{{isPassword}}" placeholder="请输入密码" />
+    </view>
+    <view class="boxItem">
+      <image style="width:40rpx;height:40rpx;margin-right:10rpx" src="./asset/password.png"></image>
+      <input bindinput="password" password="{{isPassword}}" placeholder="请再次输入密码" />
+    </view>
+    
+    <button class="loginbtn"> 注册账号</button>
+  </view>
+</view>

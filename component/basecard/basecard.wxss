@@ -1,0 +1,46 @@
+.card{
+  box-sizing: border-box;
+  padding:20rpx;
+  display: flex;
+  height:330rpx;
+  margin-top: 20rpx;
+  box-shadow: 0 4rpx 24rpx 0 rgba(179, 177, 177, 0.3);
+  position: relative;
+}
+.card-left{
+  height:290rpx;
+  width:290rpx;
+  border-radius: 20rpx;
+}
+.card-right{
+  box-sizing: bordeer-box;
+  height:290rpx;
+  flex:1;
+  padding-left:35rpx;
+
+}
+.card-right-title{
+  font-size: 37rpx;
+}
+.card-right-text{
+  margin:15rpx 0rpx;
+  font-size: 30rpx;
+  color:rgb(182, 181, 181);
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp:4;
+-webkit-box-orient: vertical;
+}
+.card-right-class{
+  background-color: #1d975c;
+  color: white;
+  width:90rpx;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 40rpx;
+  height:40rpx;
+  position: absolute;
+  bottom:20rpx
+}

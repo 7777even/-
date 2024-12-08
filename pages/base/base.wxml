@@ -1,0 +1,22 @@
+<!--pages/base/base.wxml-->
+<view id="base">  
+<view class="fixedapart">
+  <view class="header">
+<view class="search" >
+<image src="/image/tab/search.png" style="width:40rpx;height:40rpx;margin-right:20rpx"></image>
+  <input type="text" placeholder="输入病虫害名字"  bindconfirm="bindKeyInput"></input>
+</view>
+
+
+</view>
+<view class="tab">
+<view wx:for="{{tabList}}" wx:key="index" style="background-color: {{active===item.id ? '#1d975c' : '#ccc'}};" bindtap="setAct" data-id="{{item.id}}">{{item.title}}</view>
+
+</view>
+</view>
+
+<view>
+  <base-card wx:for="{{baseList}}" wx:key="index" baseData="{{item}}"></base-card>
+</view>
+
+</view>
